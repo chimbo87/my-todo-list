@@ -1,0 +1,155 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    @import url('https://fonts.googleapis.com/css2?family=Comforter&family=Dancing+Script&family=Festive&family=Hurricane&family=Inspiration&family=Montserrat:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&family=Quintessential&family=Roboto:wght@100;500;700&family=Source+Sans+Pro&display=swap');
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: rgb(136, 133, 133);
+    color: gray;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin:0 auto;
+}
+header h1{
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: gold;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+#new-task-form{
+    display: flex;
+}
+input, button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+#new-task-input{
+    flex: 1 1 0%;
+    background-color: burlywood;
+    padding: 1rem;
+    border-radius:4px;
+    margin-right: 1rem;
+    color: grey;
+    font-size: 1.25rem;
+}
+#new-task-input{
+    color: black;
+}
+#new-task-submit{
+    color: gray;
+    font-size: 1.25rem;
+    font-weight: bold;
+    background-image: linear-gradient(to right, gold, brown );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    cursor: pointer;
+    transition: 0.4s ;
+    border: 1px solid burlywood;
+    padding: 0 10px;
+    border-radius: 4px;
+    text-transform: capitalize;
+}
+#new-task-submit:hover{
+    opacity: 0.8;
+    animation: pulsate 1s ease-in-out;
+}
+@keyframes pulsate{
+    0%{
+        box-shadow: 0 0 25px gold, 0 0 50px red;
+    }
+}
+#new-task-subimt:active{
+    opacity: 0.6;
+}
+main{
+    flex: 1 1 0%;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+.task-heading{
+    display: flex;
+    flex-direction: row;
+    margin: 0px auto;
+}
+.task-heading span{
+    height: 1px;
+    width: 350px;
+    background-color: rgb(177, 176, 176);
+    display: block;
+    margin: 20px 20px;
+    
+    
+}
+.task-heading h2{
+    font-size: 1.8rem;
+    font-weight: 100;
+    color: goldenrod;
+    margin-bottom: 1rem;
+    text-align: center;
+    
+}
+#tasks .task{
+    display: flex;
+    justify-content: space-between;
+    background-color: burlywood;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    margin-bottom: 1rem;
+}
+#tasks .task .content .text{
+    color: black;
+    font-size: 1.25rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+#tasks .task .content{
+    flex: 1 1 0%;
+}
+#tasks .task .content .text:not(:read-only){
+    color: brown;
+}
+#tasks .task .actions {
+    display: flex;
+    margin: 0 0.5rem;
+    border-radius: 0.4rem;
+    background-color: rgb(228, 193, 147);
+}
+.task .actions button{
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight:bold;
+    text-transform: capitalize;
+    transition: 0.4s;
+    width: 60px;
+    
+}
+.edit{
+    color: rgb(18, 18, 51);
+    border-right: 1px solid rgb(241, 213, 160);
+    border-radius: 4px;
+}
+.delete{
+    color: brown;
+}
+.task .actions button:hover{
+    opacity: 0.8;
+}
+.task .actions button:active{
+    opacity: 0.6;
+}
